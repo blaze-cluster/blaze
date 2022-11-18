@@ -7,6 +7,7 @@ RUN apt-get update
 
 RUN pip install tensorflow-addons
 RUN pip install tqdm
+RUN pip install "overrides==7.3.1"
 
 # INSTALL JAVA
 RUN apt-get install -y openjdk-8-jdk; apt-get clean
