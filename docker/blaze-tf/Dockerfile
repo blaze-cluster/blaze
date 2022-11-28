@@ -6,8 +6,13 @@ RUN pip install --upgrade pip
 RUN apt-get update
 
 RUN pip install tensorflow-addons
+RUN pip install tensorflow-probability
+RUN pip install crc32c
+RUN pip install tensorboardX
 RUN pip install tqdm
+RUN pip install mlflow
 RUN pip install "overrides==7.3.1"
+RUN pip install "xxhash==3.1.0"
 
 # INSTALL JAVA
 RUN apt-get install -y openjdk-8-jdk; apt-get clean
