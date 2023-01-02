@@ -15,9 +15,13 @@ RUN pip install crc32c
 RUN pip install tensorboardX
 RUN pip install mlflow
 RUN pip install accelerate
-RUN pip install "overrides==7.3.1"
-RUN pip install "xxhash==3.1.0"
-
+RUN pip install "overrides~=7.3.1"
+RUN pip install "xxhash~=3.1.0"
+RUN pip install "hydra-core~=1.3.0"
+RUN pip install "mlflow~=2.0.1"
+RUN pip install "dacite~=1.6.0"
+RUN pip install "pydantic~=1.10.2"
+RUN pip install "retry~=0.9.2"
 
 #
 ## Dependencies for Hugging Face examples & tests:
