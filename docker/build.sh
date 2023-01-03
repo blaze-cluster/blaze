@@ -57,3 +57,6 @@ if [ "$GPU" == "YES" ]; then
 fi
 
 docker build --rm --build-arg SRC_IMAGE_TAG="${SRC_IMAGE_TAG}" -t blaze-"${PLATFORM}":${TARGET_IMAGE_TAG} blaze-"${PLATFORM}"/
+docker tag blaze-torch:latest-gpu 514352861371.dkr.ecr.ap-south-1.amazonaws.com/recsys/blaze-torch:latest-gpu
+aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 514352861371.dkr.ecr.ap-south-1.amazonaws.com
+docker push 514352861371.dkr.ecr.ap-south-1.amazonaws.com/recsys/blaze-torch:latest-gpu
