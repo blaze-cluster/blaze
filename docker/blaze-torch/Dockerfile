@@ -13,11 +13,11 @@ RUN pip install pytorch_lightning
 RUN pip install tqdm
 RUN pip install crc32c
 RUN pip install tensorboardX
-RUN pip install mlflow
 RUN pip install accelerate
 RUN pip install "overrides~=7.3.1"
 RUN pip install "xxhash~=3.1.0"
 RUN pip install "hydra-core~=1.3.0"
+RUN pip install "wandb~=0.13.6"
 RUN pip install "mlflow~=2.0.1"
 RUN pip install "dacite~=1.6.0"
 RUN pip install "pydantic~=1.10.2"
@@ -42,7 +42,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
 
 # INSTALL RAY
-RUN pip install "ray[all]==2.1.0"
+RUN pip install "ray[all]==2.2.0"
 RUN pip install "git+https://github.com/ray-project/ray_lightning#ray_lightning"
 
 # INSTALL RAYDP
