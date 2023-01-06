@@ -10,9 +10,14 @@ RUN pip install tensorflow-probability
 RUN pip install crc32c
 RUN pip install tensorboardX
 RUN pip install tqdm
-RUN pip install mlflow
 RUN pip install "overrides==7.3.1"
 RUN pip install "xxhash==3.1.0"
+RUN pip install "hydra-core~=1.3.0"
+RUN pip install "wandb~=0.13.6"
+RUN pip install "mlflow~=2.0.1"
+RUN pip install "dacite~=1.6.0"
+RUN pip install "pydantic~=1.10.2"
+RUN pip install "retry~=0.9.2"
 
 # INSTALL JAVA
 RUN apt-get install -y openjdk-8-jdk; apt-get clean
@@ -23,7 +28,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
 
 # INSTALL RAY
-RUN pip install "ray[all]==2.1.0"
+RUN pip install "ray[all]==2.2.0"
 
 # INSTALL RAYDP
 RUN pip install raydp
